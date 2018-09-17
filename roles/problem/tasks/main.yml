@@ -1,0 +1,10 @@
+---
+- name: "copy problematic file"
+  copy:
+    src: "problem.yml"
+    dest: "/tmp/problem.yml"
+  register: problem
+
+- name: "inspect results"
+  debug:
+    var: problem

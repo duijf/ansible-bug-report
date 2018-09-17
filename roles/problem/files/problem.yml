@@ -1,0 +1,7 @@
+The problem was originally found when copying prometheus
+templates, which can contain things like {{ $labels.instance }}.
+
+If this were a file in the `templates/` directory, I'd agree
+that this is asking for problems. However, this only gives
+problems when registering things to a variable and acting on
+it.
